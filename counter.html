@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(#3e0449, #a1158a ,#3e0449);
+            background-repeat: no-repeat;
+        }
+        #head{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-transform: uppercase;
+        }
+        h1{
+            font-size: 100px;
+            cursor: pointer;
+        }
+        .box{
+            width: 300px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.37);
+            color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            margin-top: 100px;
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 3);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            /* border-style: solid; */
+            /* border-width: 5px; */
+            /* border-color: #89018b; */
+
+
+        }
+        button{
+            margin: 5px;
+            border-radius: 20px;
+            background-color: rgb(134, 5, 151);
+            color:bisque;
+            padding: 11px;
+            border: none;
+            text-transform: capitalize;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div class="box">
+            <div id="head">
+                <h2>counter</h2>
+            </div>
+            <div id="cont">
+                <h1 id="counter">0</h1>
+            </div>
+           <div id="btn">
+            <button id="dwn">decrease</button>
+            <button id="rst">reset</button>
+            <button id="up">increse</button>
+           </div>
+
+        </div>
+    </main>
+
+
+    <script>
+            const cnt = document.getElementById('counter');
+            const dwn = document.getElementById('dwn');
+            const rst = document.getElementById('rst');
+            const up = document.getElementById('up');
+
+            let counterValue = 0;
+            dwn.addEventListener('click', function (event) {
+                counterValue -=1;
+                cnt.innerHTML = counterValue;
+
+
+            })
+            rst.addEventListener('click', function (event) {
+                counterValue =0;
+                cnt.innerHTML = counterValue;
+
+            })
+            up.addEventListener('click', function (event) {
+                counterValue +=1;
+                cnt.innerHTML = counterValue;
+                
+            })
+            
+
+
+    </script>
+
+</body>
+</html>
